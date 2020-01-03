@@ -1,15 +1,15 @@
-# from github
+import spotify_auth
 import sys
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-''' show artist genre
-    shows the albums and tracks for a given artist.
+''' search and select artist, show genre
+    display all albums
     select an album and display all tracks
 '''
 
-client_id = 'b763b8ddd5084d798ede741a126da272'
-client_secret = '476fbb1cb26046fe9514a6f20de534b8'
+client_id = spotify_auth.client_id
+client_secret = spotify_auth.client_secret
 
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 
